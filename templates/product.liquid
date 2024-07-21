@@ -1,8 +1,9 @@
 <h1>{{ product.title }}</h1>
-<p>{{ product.price |  money  }}</p>
-<div>
+<img src="{{ product.featured_image | image_url: width: 400  }}"/>
+<div> 
   {{ product.description }}
 </div>
+<p>{{ product.price |  money  }}</p>
 
 {% form 'product', product, method: 'post' %}
   <select name="id">
