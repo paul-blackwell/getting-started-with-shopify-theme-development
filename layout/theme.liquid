@@ -1,10 +1,11 @@
 <html>
   <head>
     {{ content_for_header }}
-    {{ 'style.css' |  asset_url |  stylesheet_tag }}
+    {% comment %} {{ 'style.css' |  asset_url |  stylesheet_tag }} {% endcomment %}
   </head>
   <body>
+    {% render 'header' %}
     {{ content_for_layout }}
-    {{ 'scripts.js' |  asset_url |  script_tag }}
+    {% comment %} {{ 'scripts.js' |  asset_url |  script_tag }} {% endcomment %}
   </body>
 </html>
